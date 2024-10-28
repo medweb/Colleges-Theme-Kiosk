@@ -9,6 +9,38 @@
   ],
   "creatorBuild" : "34592",
   "files" : {
+    "\/footer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/footer.php",
+      "oF" : 0
+    },
+    "\/functions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/functions.php",
+      "oF" : 0
+    },
+    "\/header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/header.php",
+      "oF" : 0
+    },
+    "\/page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page.php",
+      "oF" : 0
+    },
     "\/style.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -35,6 +67,22 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/template-basic.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-basic.php",
+      "oF" : 0
+    },
+    "\/template-fullscreen.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-fullscreen.php",
+      "oF" : 0
     }
   },
   "hooks" : [

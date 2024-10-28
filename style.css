@@ -1,5 +1,5 @@
 /*
- Theme Name:   Colleges Master Kiosk/TV Child
+ Theme Name:   Colleges master kiosk
  Theme URI:    http://med.ucf.edu/
  Description:  Colleges master COM child Theme for TV Screens
  Author:       Matthew Vaccaro, Stephen Schrauger
@@ -11,3 +11,23 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-Kiosk
 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 200%;
+}
+
+.site-header {
+  height: 300px;
+  background: #666;
+}
+.site-header .navbar {
+  display: none;
+}
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  width: 100%;
+  height: 300px;
+}
