@@ -6,10 +6,12 @@
 ?>
 <?php get_header(); the_post(); ?>
 
-<div class="container mb-5 mt-3 mt-lg-5">
-	<article class="<?php echo $post->post_status; ?> post-list-item">
-		<?php the_content(); ?>
-	</article>
-</div>
+<section class="container main-container-1 p-5">
+
+<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0">News</h2>
+                
+    <?php get_template_part( 'loop-post-1' ); ?>
+
+</section>
 
 <?php get_footer(); ?>

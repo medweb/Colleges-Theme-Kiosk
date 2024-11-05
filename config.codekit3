@@ -33,6 +33,156 @@
       "oAP" : "\/header.php",
       "oF" : 0
     },
+    "\/images\/logo\/24-com-logo.png" : {
+      "ft" : 32768,
+      "iS" : 10262,
+      "oA" : 0,
+      "oAP" : "\/images\/logo\/24-com-logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/images\/logo\/ucf-long-w.jpg" : {
+      "ft" : 16384,
+      "iS" : 10998,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/logo\/ucf-long-w.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/logo\/ucfh-w.png" : {
+      "ft" : 32768,
+      "iS" : 2255,
+      "oA" : 0,
+      "oAP" : "\/images\/logo\/ucfh-w.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/includes\/simple_html_dom.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/includes\/simple_html_dom.php",
+      "oF" : 0
+    },
+    "\/includes\/theme-options.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/includes\/theme-options.php",
+      "oF" : 0
+    },
+    "\/js\/engine-non-interactive-ucf-health.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-non-interactive-ucf-health-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/engine-non-interactive.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-non-interactive-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/engine-social-prevent-clicks.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-social-prevent-clicks-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/engine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/min\/engine-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/min\/engine-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/loop-post-1.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/loop-post-1.php",
+      "oF" : 0
+    },
+    "\/loop-post-ucfhealth.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/loop-post-ucfhealth.php",
+      "oF" : 0
+    },
+    "\/page-horizontal-no-loop.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-horizontal-no-loop.php",
+      "oF" : 0
+    },
+    "\/page-horizontal-ucfhealth.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-horizontal-ucfhealth.php",
+      "oF" : 0
+    },
+    "\/page-horizontal.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-horizontal.php",
+      "oF" : 0
+    },
     "\/page.php" : {
       "cB" : 0,
       "ft" : 8192,

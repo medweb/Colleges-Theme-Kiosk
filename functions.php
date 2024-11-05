@@ -41,6 +41,13 @@ function com_child_theme_scripts() {
 
 }
 
+// Custom nav classes for the footer touch nav using athena
+function add_link_atts($atts) {
+  $atts['class'] = "btn btn-primary";
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_link_atts');
+
 // Custom body class for page-name and site-name
 add_filter( 'body_class', 'body_class_for_pages' );
 

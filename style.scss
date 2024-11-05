@@ -13,27 +13,148 @@
 */
 
 $medium-grey: #666;
+$light-bg: #ececec;
+$white: #FFF;
+$yellow-accent: #FC0;
+$yellow: #FC0;
+$black: #000;
 
-$hf-heights: 300px;
+body {
+	font-size: 200% !important;
+}
 
-h1, h2, h3, h4, h5, h6 {
-	font-size: 200%;
+#ucfhb {
+	display: none !important;
+}
+
+.container {
+	width: 100% !important;
+}
+
+.main-container-1 {
+	height: 500px;
 }
 
 .site-header {
-	height: $hf-heights;
 	background: $medium-grey;
+	padding: 1rem 1rem 1rem 0;
 
 	.navbar {
+		display: none;
+	}
+
+	h1 {
+		background: url('images/logo/24-com-logo.png') no-repeat left center / 60%;
+		width: 25%;
+		text-indent: -9999px;
+		padding: 2rem !important;
+		margin: 0 !important;
+	}
+}
+
+article {
+	height: 500px;
+	background: $yellow;
+	position: relative;
+
+	.photo-container {
+		width: 44%;
+		height: 620px;
+		float: right;
+		margin-top: -165px;
+		margin-left: 0;
+		margin-right: 50px;
+		border: 26px solid #fff;
+		box-shadow: 0px 0px 80px rgba(0,0,0,.3);
+		background: #000;
+		display: flex;
+  		justify-content: center;
+  		background-size: cover !important;
+
+		.photo-prev {
+			display: block;
+			margin: auto;
+		}
+	}
+
+	.excerpt {
+		background: #fff;
+	    padding: 20px 40px 40px 40px;
+	    float: left;
+	    width: 47%;
+	    font-size: 1.4rem;
+	    margin: 50px 0 0 50px;
+	    height: 405px;
+	    overflow: hidden;
+
+	    button {
+	    	margin-bottom: 20px;
+	    }
+	}
+
+	.module-nav {
+		display: none;
+	}
+}
+
+.touch-nav {
+	background: $medium-grey;
+	padding: 1rem;
+	
+	ul.menu {
+	display: flex;
+	justify-content: space-around;
+	overflow: auto;
+
+		li { 
+			width: 15%;
+			float: left;
+			list-style: none;
+
+			a {
+
+			}
+		}
+	}
+
+}
+
+.page-template-page-horizontal-ucfhealth {
+	.site-header {
+
+		h1 {
+			background-image: url('images/logo/ucfh-w.png');
+		}
+	}
+}
+
+.page-template-page-horizontal-ucfhealth,
+.page-template-page-horizontal {
+
+	.site-main {
+	    width: 92%;
+    	margin: 0 auto 0 auto;
+
+    	.ucfh-horiz-h2 {
+			font-size: 14.6vh;
+			letter-spacing: -20px;
+			margin-bottom: 20px;
+
+			span {
+				font-size: 7.9vh;
+				display: block;
+				letter-spacing: -10px;
+				font-weight: normal;
+				margin-bottom: -30px;
+			}
+		}
+	}
+
+	.touch-nav {
 		display: none;
 	}
 }
 
 .site-footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	background-color: red;
-	width: 100%;
-	height: $hf-heights;
+	display: none;
 }

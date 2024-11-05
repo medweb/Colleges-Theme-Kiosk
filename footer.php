@@ -1,4 +1,22 @@
 		</main>
+
+		<nav class="touch-nav p-5">
+			
+			<h3 class="heading-underline text-uppercase display-5"><span>Currently Viewing</span></h3>
+
+			<?php $array = array(
+
+				'theme_location' => 'header-menu',
+				'container' => '',
+				'link_before' => '<span>',
+				'link_after' => '</span>'
+
+			);
+
+			wp_nav_menu( $array ); ?>
+
+		</nav>
+
 		<footer class="site-footer bg-inverse">
 			<div class="container">
 				<div class="row">
