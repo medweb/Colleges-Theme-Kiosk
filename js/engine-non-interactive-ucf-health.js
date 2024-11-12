@@ -47,8 +47,10 @@ jQuery( document ).ready(function($) {
 
         var article_desired = get_article_array_number($(this).data('article-desired'));
 
-        $('section.container article:visible').fadeOut();
-        $('section.container article[data-article-number="' + article_desired + '"]').fadeIn();
+        // crossfade
+        $('section.container article:visible').fadeOut(250, function() {
+            $('section.container article[data-article-number="' + article_desired + '"]').fadeIn(250);
+        });
 
     });
 

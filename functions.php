@@ -38,6 +38,22 @@ function com_child_theme_scripts() {
 		filemtime(get_stylesheet_directory() . '/style.css' )
 	);
 
+    // fancybox
+    wp_enqueue_script(
+        'fancybox-style-script',
+        get_stylesheet_directory_uri() . '/js/jquery.fancybox.pack.js',
+        array('jquery'),
+        filemtime( get_stylesheet_directory() . '/js/jquery.fancybox.pack.js' ), // force cache invalidate if md5 changes
+        true // load in footer
+    );
+    wp_enqueue_style(
+        'fancybox-style',
+        get_stylesheet_directory_uri() . '/css/fancybox.css',
+        null,
+        filemtime(get_stylesheet_directory_uri() . '/css/fancybox.css' )
+    );
+
+
 
 }
 

@@ -1,15 +1,27 @@
 <?php
 switch_to_blog ( '1' );
+
+$taxonomy = 'news_category';
+if ( ! taxonomy_exists( $taxonomy ) ) {
+    // wp_query needs this taxonomy to be registered in the main blog or else the tax_query
+    // will fail and render as sql "0 = 1", returning no results.
+    // switch_to_blog doesn't automatically register all taxonomies, and our parent theme
+    // doesn't include news_category like our old ucf-com-main theme did.
+
+    // this can be a stub. the data exists in the database; wordpress simply needs to be
+    // aware of the taxonomy in order to build a sql query.
+    register_taxonomy( $taxonomy, null, [] );
+}
 $args = array(
 	'post_type' => 'news',
 	'posts_per_page' => 5,
 	'tax_query' => array(
-		'relation' => 'AND',
+		'relation' => 'OR',
 		array(
 			'taxonomy' => 'news_category',
 			'field'    => 'slug',
 			'terms'    => 'external-news',
-			'operator' => 'NOT IN',
+			'operator' => 'NOT IN'
 		),
 	)
 );
