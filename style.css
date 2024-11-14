@@ -39,7 +39,7 @@ body {
   width: 25%;
   text-indent: -9999px;
   padding: 2rem !important;
-  margin: 0 !important;
+  margin: 0 0 0 90px !important;
 }
 
 article {
@@ -127,5 +127,3 @@ article .module-nav {
 .site-footer {
   display: none;
 }
-
-/*# sourceMappingURL=style.css.map */
