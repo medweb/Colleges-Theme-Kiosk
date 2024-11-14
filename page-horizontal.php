@@ -1,8 +1,8 @@
 <?php
 /* Template Name: Horizontal News Feed */
 get_header();
-wp_dequeue_script('ucf_com_screen_engine');
-wp_enqueue_script('ucf_com_screen_engine_non_interactive');
+wp_dequeue_script('com_child_theme_screen_engine');
+wp_enqueue_script('com_child_theme_screen_engine_non_interactive');
 
 ?>
 

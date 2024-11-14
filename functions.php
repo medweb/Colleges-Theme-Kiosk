@@ -13,7 +13,7 @@ get_template_part('acf-fields'); //add all theme ACF settings (side & top nav)
 function com_child_theme_scripts() {
 	// Theme engine
 	wp_enqueue_script(
-		'ucf_com_screen_engine',
+		'com_child_theme_screen_engine',
 		get_stylesheet_directory_uri() . '/js/engine.js',
 		array('jquery'),
 		filemtime( get_stylesheet_directory() . '/js/engine.js' ), // force cache invalidate if md5 changes
@@ -56,7 +56,7 @@ function com_child_theme_scripts() {
 
     // Register the vestibule js, but don't enqueue it. Let the template page enqueue it so it only loads on those pages.
     wp_register_script(
-        'ucf_com_screen_engine_non_interactive',
+        'com_child_theme_screen_engine_non_interactive',
         get_stylesheet_directory_uri() . '/js/engine-non-interactive.js',
         array(),
         filemtime( get_stylesheet_directory() . '/js/engine-non-interactive.js'), // force cache invalidate if md5 changes
@@ -65,7 +65,7 @@ function com_child_theme_scripts() {
 
     // Register the vestibule js, but don't enqueue it. Let the template page enqueue it so it only loads on those pages.
     wp_register_script(
-        'ucf_com_screen_engine_non_interactive_ucf_health',
+        'com_child_theme_screen_engine_non_interactive_ucf_health',
         get_stylesheet_directory_uri() . '/js/engine-non-interactive-ucf-health.js',
         array(),
         filemtime( get_stylesheet_directory() . '/js/engine-non-interactive-ucf-health.js'), // force cache invalidate if md5 changes

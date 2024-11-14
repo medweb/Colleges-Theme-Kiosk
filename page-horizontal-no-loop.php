@@ -1,7 +1,7 @@
 <?php
 /* Template Name: TV Template - Non-scrolling */
 get_header();
-wp_dequeue_script('ucf_com_screen_engine'); // disable auto rotation between articles and pages
+wp_dequeue_script('com_child_theme_screen_engine'); // disable auto rotation between articles and pages
 
 ?>
 
