@@ -14,7 +14,6 @@ jQuery( document ).ready(function($) {
      * ability to disable this within the browser preferences.
      */
 
-
     // Turn twitter feed items into a masonry grid.
     // @TODO load more when user scrolls down.
     $('.grid').masonry({
