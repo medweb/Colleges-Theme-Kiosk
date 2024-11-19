@@ -50,7 +50,7 @@ function com_child_theme_scripts() {
         'fancybox-style',
         get_stylesheet_directory_uri() . '/css/fancybox.css',
         null,
-        filemtime(get_stylesheet_directory_uri() . '/css/fancybox.css' )
+        filemtime(get_stylesheet_directory() . '/css/fancybox.css' )
     );
 
 
