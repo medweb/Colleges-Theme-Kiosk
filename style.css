@@ -70,10 +70,13 @@ article .excerpt {
   padding: 20px 40px 40px 40px;
   float: left;
   width: 47%;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 50px 0 0 50px;
   height: 405px;
   overflow: hidden;
+}
+article .excerpt h2 {
+  margin-bottom: 10px;
 }
 article .excerpt button {
   margin-bottom: 20px;
@@ -82,9 +85,40 @@ article .module-nav {
   display: none;
 }
 
+.home .site-main {
+  padding: 5rem;
+}
+.home h1 {
+  font-size: 600%;
+  text-transform: uppercase;
+}
+.home article .photo-container {
+  float: none;
+  width: 100%;
+  margin: 100px 0;
+  height: 1200px;
+}
+.home article .excerpt {
+  width: 90%;
+  margin: 0;
+  height: 1200px;
+  font-size: 4rem;
+}
+.home article .excerpt h2 {
+  font-size: 7rem;
+}
+
 .touch-nav {
   background: #666;
-  padding: 1rem;
+  height: 600px;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  bottom: 0;
+}
+.touch-nav h3 {
+  font-size: 200%;
+  margin-bottom: 5rem;
 }
 .touch-nav ul.menu {
   display: flex;
@@ -92,10 +126,14 @@ article .module-nav {
   overflow: auto;
 }
 .touch-nav ul.menu li {
-  width: 15%;
   float: left;
   list-style: none;
 }
+.touch-nav ul.menu li a.btn {
+  font-size: 200%;
+  padding: 5rem;
+}
+
 .page-template-page-horizontal-ucfhealth .site-header h1 {
   background-image: url("images/logo/ucfh-w.png");
 }
@@ -127,5 +165,3 @@ article .module-nav {
 .site-footer {
   display: none;
 }
-
-/*# sourceMappingURL=style.css.map */
