@@ -85,26 +85,35 @@ article .module-nav {
   display: none;
 }
 
-.home .site-main {
+.home .site-header h1,
+.page-events .site-header h1 {
+  width: 1000px;
+}
+.home .site-main,
+.page-events .site-main {
   padding: 5rem;
 }
-.home h1 {
+.home h1,
+.page-events h1 {
   font-size: 600%;
   text-transform: uppercase;
 }
-.home article .photo-container {
+.home article .photo-container,
+.page-events article .photo-container {
   float: none;
   width: 100%;
   margin: 100px 0;
   height: 1200px;
 }
-.home article .excerpt {
+.home article .excerpt,
+.page-events article .excerpt {
   width: 90%;
   margin: 0;
   height: 1200px;
   font-size: 4rem;
 }
-.home article .excerpt h2 {
+.home article .excerpt h2,
+.page-events article .excerpt h2 {
   font-size: 7rem;
 }
 
@@ -119,6 +128,7 @@ article .module-nav {
 .touch-nav h3 {
   font-size: 200%;
   margin-bottom: 5rem;
+  color: #fff;
 }
 .touch-nav ul.menu {
   display: flex;

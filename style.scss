@@ -101,7 +101,14 @@ article {
 	}
 }
 
-.home {
+.home,
+.page-events {
+
+	.site-header {
+		h1 {
+			width: 1000px;
+		}
+	}
 
 	.site-main {
 		padding: 5rem;
@@ -144,6 +151,7 @@ article {
 	h3 {
 		font-size: 200%;
 		margin-bottom: 5rem;
+		color: #fff;
 	}
 	
 	ul.menu {
