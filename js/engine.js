@@ -19,8 +19,8 @@ jQuery( document ).ready(function($) {
     // autoscroll array entries MUST be surrounded by forward slashes. they must match the string window.location.pathname to work.
     const autoscroll_to_pages       = [
         '/marketing-kiosk/',
-        '/marketing-kiosk/events/'
-        // '/marketing-kiosk/social/'
+        '/marketing-kiosk/events/',
+        '/marketing-kiosk/social/'
     ];  // after timeout, autoscroll these pages (in the order specified)
     const autoscroll_within_pages   = ['/marketing-kiosk/']; // if we are on these pages, it will first autoscroll inner elements until the end, then go to the next autoscroll page.
 
