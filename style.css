@@ -238,3 +238,7 @@ article .module-nav {
 .page-template-page-horizontal .site-footer {
   display: none;
 }
+
+.ucf-footer {
+  display: none;
+}
