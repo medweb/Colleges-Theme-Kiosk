@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34592",
   "files" : {
+    "\/.gitignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.gitignore",
+      "oF" : 0
+    },
     "\/css\/fancybox.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -50,6 +58,19 @@
       "iS" : 10262,
       "oA" : 0,
       "oAP" : "\/images\/logo\/24-com-logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/images\/logo\/nursing-logo.png" : {
+      "ft" : 32768,
+      "iS" : 67844,
+      "oA" : 0,
+      "oAP" : "\/images\/logo\/nursing-logo.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -180,6 +201,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/loop-post-1.php",
+      "oF" : 0
+    },
+    "\/loop-post-nurs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/loop-post-nurs.php",
       "oF" : 0
     },
     "\/loop-post-ucfhealth.php" : {

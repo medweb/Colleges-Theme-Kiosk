@@ -4,6 +4,8 @@ get_header();
 wp_dequeue_script('com_child_theme_screen_engine');
 wp_enqueue_script('com_child_theme_screen_engine_non_interactive');
 
+$classes = get_body_class();
+
 ?>
 
 <section class="container">
@@ -12,9 +14,28 @@ wp_enqueue_script('com_child_theme_screen_engine_non_interactive');
 
 	<section class="main-content">
 
-		<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0 ucfh-horiz-h2"><span>Med School</span>News</h2>
-                
-    <?php get_template_part( 'loop-post-1' ); ?>
+		<?php if (in_array('site-marketingkiosk',$classes)) { ?>
+
+			<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0 ucfh-horiz-h2"><span>Med School</span>News</h2>
+
+		<?php } ?>
+
+		<?php if (in_array('site-nursingkiosk',$classes)) { ?>
+
+			<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0 ucfh-horiz-h2"><span>Nursing</span>News</h2>
+
+		<?php } ?>
+
+		<?php if (in_array('site-marketingkiosk',$classes)) { 
+
+			get_template_part( 'loop-post-1' );
+
+		 } else {
+
+		 	echo 'NURSING NEWS';
+
+		 }?>
+
 
 	</section>
 

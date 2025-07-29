@@ -4,6 +4,8 @@ get_header();
 wp_dequeue_script('com_child_theme_screen_engine');
 wp_enqueue_script('com_child_theme_screen_engine_non_interactive_ucf_health');
 
+$classes = get_body_class();
+
 ?>
 
 <section class="container">
@@ -19,5 +21,15 @@ wp_enqueue_script('com_child_theme_screen_engine_non_interactive_ucf_health');
 	</section>
 
 </section>
+
+<?php if (in_array('page-template-page-horizontal-ucfhealth',$classes) && get_field( 'footer_notice' ) ) { ?>
+
+	<div class="ucfh-notice">
+
+		<?php echo get_field( 'footer_notice' ); ?>
+
+	</div>
+
+<?php } ?>
 
 <?php get_footer(); ?>

@@ -54,7 +54,7 @@ if ( $the_query->have_posts() ) {
 				$content = get_the_content();
 				echo wp_trim_words( strip_shortcodes($content) , '40' ); ?></p>
 
-				<p><strong>Continue reading visit med.ucf.edu/news</strong></p>
+				<p><strong>Continue reading visit nursing.ucf.edu/about/news-events/</strong></p>
 
 			</div>
 

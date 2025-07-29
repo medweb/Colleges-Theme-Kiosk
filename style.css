@@ -17,6 +17,8 @@ body {
 
 #ucfhb {
   display: none !important;
+  position: absolute !important;
+  left: -99999px !important;
 }
 
 .container {
@@ -35,11 +37,30 @@ body {
   display: none;
 }
 .site-header h1 {
-  background: url("images/logo/24-com-logo.png") no-repeat left center/60%;
+  /*background: url('images/logo/24-com-logo.png') no-repeat left center / 60%;*/
   width: 25%;
   text-indent: -9999px;
   padding: 2rem !important;
   margin: 0 0 0 90px !important;
+}
+
+.site-main h1 {
+  font-size: 600%;
+  text-transform: uppercase;
+}
+
+.site-marketingkiosk .site-header h1 {
+  background: url("images/logo/24-com-logo.png") no-repeat left center/60%;
+  height: 300px;
+}
+
+.site-nursingkiosk .site-header h1 {
+  background: url("images/logo/nursing-logo.png") no-repeat left center/60%;
+  height: 300px;
+}
+
+.page-template-page-horizontal-ucfhealth .site-header h1 {
+  background: url("images/logo/ucfh-w.png") no-repeat left center/90%;
 }
 
 article {
@@ -86,68 +107,112 @@ article .module-nav {
 }
 
 .home .site-header h1,
-.page-events .site-header h1 {
+.page-events .site-header h1,
+.page-social .site-header h1 {
   width: 1000px;
 }
 .home .site-main,
-.page-events .site-main {
+.page-events .site-main,
+.page-social .site-main {
   padding: 5rem;
 }
 .home h1,
-.page-events h1 {
-  font-size: 600%;
-  text-transform: uppercase;
+.page-events h1,
+.page-social h1 {
+  /*font-size: 600%;
+  text-transform: uppercase;*/
 }
 .home article .photo-container,
-.page-events article .photo-container {
+.page-events article .photo-container,
+.page-social article .photo-container {
   float: none;
   width: 100%;
   margin: 100px 0;
   height: 1200px;
 }
 .home article .excerpt,
-.page-events article .excerpt {
+.page-events article .excerpt,
+.page-social article .excerpt {
   width: 90%;
   margin: 0;
   height: 1200px;
   font-size: 4rem;
 }
 .home article .excerpt h2,
-.page-events article .excerpt h2 {
+.page-events article .excerpt h2,
+.page-social article .excerpt h2 {
   font-size: 7rem;
 }
 
+.ucfh-notice {
+  background: #000;
+  color: #fff;
+  font-size: 22px;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.ucfh-notice .badge {
+  margin-right: 15px;
+}
+
+.site-footer {
+  /*display: none;*/
+  padding: 120px;
+}
+
 .touch-nav {
+  padding: 120px;
+}
+
+.touch-nav,
+.site-footer {
   background: #666;
-  height: 600px;
   position: fixed;
   z-index: 99999;
   width: 100%;
   bottom: 0;
 }
-.touch-nav h3 {
+.touch-nav h3,
+.site-footer h3 {
   font-size: 200%;
   margin-bottom: 5rem;
   color: #fff;
 }
-.touch-nav ul.menu {
+.touch-nav .h1, .touch-nav .h2, .touch-nav .h3, .touch-nav .h4, .touch-nav .h5,
+.site-footer .h1,
+.site-footer .h2,
+.site-footer .h3,
+.site-footer .h4,
+.site-footer .h5 {
+  font-size: 150% !important;
+}
+.touch-nav ul.menu,
+.site-footer ul.menu {
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
   justify-content: space-around;
   overflow: auto;
 }
-.touch-nav ul.menu li {
+.touch-nav ul.menu li,
+.site-footer ul.menu li {
   float: left;
   list-style: none;
 }
-.touch-nav ul.menu li a.btn {
+.touch-nav ul.menu li a.btn,
+.site-footer ul.menu li a.btn {
   font-size: 200%;
   padding: 5rem;
 }
 
-.page-template-page-horizontal-ucfhealth .site-header h1 {
-  background-image: url("images/logo/ucfh-w.png");
+.page-template-page-horizontal-ucfhealth .site-header h1,
+.page-template-page-horizontal .site-header h1 {
+  height: 100px;
 }
-
 .page-template-page-horizontal-ucfhealth .site-main,
 .page-template-page-horizontal .site-main {
   width: 92%;
@@ -168,10 +233,8 @@ article .module-nav {
   margin-bottom: -30px;
 }
 .page-template-page-horizontal-ucfhealth .touch-nav,
-.page-template-page-horizontal .touch-nav {
-  display: none;
-}
-
-.site-footer {
+.page-template-page-horizontal-ucfhealth .site-footer,
+.page-template-page-horizontal .touch-nav,
+.page-template-page-horizontal .site-footer {
   display: none;
 }

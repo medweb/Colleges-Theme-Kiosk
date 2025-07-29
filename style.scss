@@ -25,6 +25,8 @@ body {
 
 #ucfhb {
 	display: none !important;
+	position: absolute !important;
+	left: -99999px !important;
 }
 
 .container {
@@ -44,11 +46,44 @@ body {
 	}
 
 	h1 {
-		background: url('images/logo/24-com-logo.png') no-repeat left center / 60%;
+		/*background: url('images/logo/24-com-logo.png') no-repeat left center / 60%;*/
 		width: 25%;
 		text-indent: -9999px;
 		padding: 2rem !important;
 		margin: 0 0 0 90px !important;
+	}
+}
+
+.site-main {
+	h1 {
+		font-size: 600%;
+		text-transform: uppercase;
+	}
+}
+
+.site-marketingkiosk {
+	.site-header {
+		h1 {
+			background: url('images/logo/24-com-logo.png') no-repeat left center / 60%;
+			height: 300px;
+		}
+	}
+}
+
+.site-nursingkiosk {
+	.site-header {
+		h1 {
+			background: url('images/logo/nursing-logo.png') no-repeat left center / 60%;
+			height: 300px;
+		}
+	}
+}
+
+.page-template-page-horizontal-ucfhealth {
+	.site-header {
+		h1 {
+			background: url('images/logo/ucfh-w.png') no-repeat left center / 90%;
+		}
 	}
 }
 
@@ -102,7 +137,8 @@ article {
 }
 
 .home,
-.page-events {
+.page-events,
+.page-social {
 
 	.site-header {
 		h1 {
@@ -115,8 +151,8 @@ article {
 	}
 
 	h1 {
-		font-size: 600%;
-		text-transform: uppercase;
+		/*font-size: 600%;
+		text-transform: uppercase;*/
 	}
 
 	article {
@@ -140,9 +176,34 @@ article {
 	}
 }
 
+.ucfh-notice {
+	background: #000;
+	color: #fff;
+	font-size: 22px;
+	padding: 1rem 2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+
+	.badge {
+		margin-right: 15px;
+	}
+}
+
+.site-footer {
+	/*display: none;*/
+	padding: 120px;
+}
+
 .touch-nav {
+	padding: 120px;
+}
+
+.touch-nav,
+.site-footer {
 	background: $medium-grey;
-	height: 600px;
 	position: fixed;
 	z-index: 99999;
 	width: 100%;
@@ -153,9 +214,15 @@ article {
 		margin-bottom: 5rem;
 		color: #fff;
 	}
+
+	.h1,.h2,.h3,.h4,.h5 {
+		font-size: 150% !important;
+	}
 	
 	ul.menu {
 	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 2;
 	justify-content: space-around;
 	overflow: auto;
 
@@ -173,17 +240,15 @@ article {
 
 }
 
-.page-template-page-horizontal-ucfhealth {
+.page-template-page-horizontal-ucfhealth,
+.page-template-page-horizontal {
+
 	.site-header {
 
 		h1 {
-			background-image: url('images/logo/ucfh-w.png');
+			height: 100px;
 		}
 	}
-}
-
-.page-template-page-horizontal-ucfhealth,
-.page-template-page-horizontal {
 
 	.site-main {
 	    width: 92%;
@@ -204,12 +269,9 @@ article {
 		}
 	}
 
-	.touch-nav {
+	.touch-nav,
+	.site-footer {
 		display: none;
 	}
-}
-
-.site-footer {
-	display: none;
 }
 
