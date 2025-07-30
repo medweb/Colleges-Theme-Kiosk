@@ -4,8 +4,8 @@ jQuery( document ).ready(function($) {
     const seconds_until_timeout     = 120;        // wait this many seconds before going back to kiosk mode
     const seconds_between_stories   = 15;        // when in kiosk mode, wait this long before auto-changing stories
     // autoscroll array entries MUST be surrounded by forward slashes. they must match the string window.location.pathname to work.
-    const autoscroll_to_pages       = ['/marketing-kiosk/horizontal-news-nursing/'];  // after timeout, autoscroll these pages (in the order specified)
-    const autoscroll_within_pages   = ['/marketing-kiosk/horizontal-news-nursing/']; // if we are on these pages, it will first autoscroll inner elements until the end, then go to the next autoscroll page.
+    const autoscroll_to_pages       = ['/nursing-kiosk/horizontal-screens/'];  // after timeout, autoscroll these pages (in the order specified)
+    const autoscroll_within_pages   = ['/nursing-kiosk/horizontal-screens/']; // if we are on these pages, it will first autoscroll inner elements until the end, then go to the next autoscroll page.
 
     var current_article = 1; // since nav buttons are hidden, keep track of the current visible article in js.
     /**
