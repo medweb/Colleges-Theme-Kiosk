@@ -210,22 +210,26 @@ article .module-nav {
 }
 
 .page-template-page-horizontal-ucfhealth .site-header h1,
-.page-template-page-horizontal .site-header h1 {
+.page-template-page-horizontal .site-header h1,
+.page-template-page-horizontal-nurs .site-header h1 {
   height: 100px;
 }
 .page-template-page-horizontal-ucfhealth .site-main,
-.page-template-page-horizontal .site-main {
+.page-template-page-horizontal .site-main,
+.page-template-page-horizontal-nurs .site-main {
   width: 92%;
   margin: 0 auto 0 auto;
 }
 .page-template-page-horizontal-ucfhealth .site-main .ucfh-horiz-h2,
-.page-template-page-horizontal .site-main .ucfh-horiz-h2 {
+.page-template-page-horizontal .site-main .ucfh-horiz-h2,
+.page-template-page-horizontal-nurs .site-main .ucfh-horiz-h2 {
   font-size: 14.6vh;
   letter-spacing: -20px;
   margin-bottom: 20px;
 }
 .page-template-page-horizontal-ucfhealth .site-main .ucfh-horiz-h2 span,
-.page-template-page-horizontal .site-main .ucfh-horiz-h2 span {
+.page-template-page-horizontal .site-main .ucfh-horiz-h2 span,
+.page-template-page-horizontal-nurs .site-main .ucfh-horiz-h2 span {
   font-size: 7.9vh;
   display: block;
   letter-spacing: -10px;
@@ -235,7 +239,9 @@ article .module-nav {
 .page-template-page-horizontal-ucfhealth .touch-nav,
 .page-template-page-horizontal-ucfhealth .site-footer,
 .page-template-page-horizontal .touch-nav,
-.page-template-page-horizontal .site-footer {
+.page-template-page-horizontal .site-footer,
+.page-template-page-horizontal-nurs .touch-nav,
+.page-template-page-horizontal-nurs .site-footer {
   display: none;
 }
 

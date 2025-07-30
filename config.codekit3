@@ -129,6 +129,17 @@
       "oAP" : "\/index.php",
       "oF" : 0
     },
+    "\/js\/engine-non-interactive-nurs.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-non-interactive-nurs-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/js\/engine-non-interactive-ucf-health.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -225,6 +236,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/page-horizontal-no-loop.php",
+      "oF" : 0
+    },
+    "\/page-horizontal-nurs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-horizontal-nurs.php",
       "oF" : 0
     },
     "\/page-horizontal-ucfhealth.php" : {
