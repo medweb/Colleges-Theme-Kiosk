@@ -14,7 +14,7 @@ $classes = get_body_class();
 
 	<section class="main-content">
 
-		<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0 ucfh-horiz-h2"><span>News</span></h2>
+		<h2 class="display-1 pt-3 text-uppercase font-weight-black letter-spacing-0 ucfh-horiz-h2"><span>Nursing</span>News</h2>
                 
     <?php get_template_part( 'loop-post-nurs' ); ?>
 
