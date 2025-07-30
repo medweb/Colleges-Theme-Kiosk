@@ -1,6 +1,6 @@
 <?php
 
-namespace ucf_nurs_main_screen;
+namespace ucf_com_main_screen;
 // pull in clinical trials from blog 1, and pull in specially tagged articles from external ucfhealth rss feed.
 // mix them together here.
 require_once( 'includes/simple_html_dom.php' );
