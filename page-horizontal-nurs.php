@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Horizontal News Feed UCF Health */
+/* Template Name: Horizontal News Feed Nursing */
 get_header();
 wp_dequeue_script('com_child_theme_screen_engine');
 wp_enqueue_script('com_child_theme_screen_engine_non_interactive_nurs');
