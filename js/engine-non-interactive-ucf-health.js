@@ -138,7 +138,7 @@ jQuery( document ).ready(function($) {
             // the only time the article_desired will be set to '1' is when the news has ended and is trying to loop back to the
             // start. therefore, when the next article is '1', we have reached the end of the news, and we can continue on
             // to loading the next tab rather than looping the news.
-            //go_to_next_page();
+            go_to_next_page();
         } else {
             $('section.container article:visible .arrow-next').trigger('click');
         }
