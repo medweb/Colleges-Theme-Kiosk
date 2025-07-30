@@ -1,94 +1,192 @@
 <?php
-switch_to_blog ( '1' );
 
-$taxonomy = 'news_category';
-if ( ! taxonomy_exists( $taxonomy ) ) {
-    // wp_query needs this taxonomy to be registered in the main blog or else the tax_query
-    // will fail and render as sql "0 = 1", returning no results.
-    // switch_to_blog doesn't automatically register all taxonomies, and our parent theme
-    // doesn't include news_category like our old ucf-com-main theme did.
+namespace ucf_nurs_main_screen;
+// pull in clinical trials from blog 1, and pull in specially tagged articles from external ucfhealth rss feed.
+// mix them together here.
+require_once( 'includes/simple_html_dom.php' );
 
-    // this can be a stub. the data exists in the database; wordpress simply needs to be
-    // aware of the taxonomy in order to build a sql query.
-    register_taxonomy( $taxonomy, null, [] );
-}
-$args = array(
-	'post_type' => 'news',
-	'posts_per_page' => 5,
-	'tax_query' => array(
-		'relation' => 'OR',
-		array(
-			'taxonomy' => 'news_category',
-			'field'    => 'slug',
-			'terms'    => 'external-news',
-			'operator' => 'NOT IN'
-		),
-	)
-);
+$max_articles_per_source = 5; // multiply this by the number of sources to get the max total articles displayed
 
-// The Query
-$the_query = new WP_Query( $args );
+//switch_to_blog ( '1' );
 
-// The Loop
-if ( $the_query->have_posts() ) {
-	$article_count = 0;
-	while ( $the_query->have_posts() ) {
-		$article_count++;
-		$the_query->the_post();
-        $visibility = "";
-        if ($article_count > 1) {
-            $visibility = "display: none";
+###### Source 1
+// Get rss feed posts.
+$array_source_nurscrosspost_posts = [];
+$external_posts = external_site_query( "https://nursing.ucf.edu/feed/?category_name=community", $max_articles_per_source );
+
+// Print out the rss news articles
+if ( count($external_posts) > 0 ) {
+    for ($i = 0; $i < count($external_posts); $i++ ) {
+
+        $content = $external_posts[$i]['piece'];
+        $title = $external_posts[$i]['title'];
+        $image = $external_posts[$i]['image'];
+        if (!($image)) {
+            $image = "https://med.ucf.edu/media/2021/02/med-center-exterior-shot-for-marketing-1024x683.jpg";
         }
 
-		$preview = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-		$image = $preview[0]; 
-		$link = "https://www.youtube.com/embed/" . get_field( 'youtube_video_id' ) . '?autoplay=1&modestbranding=1&fs=0&controls=0&cc_load_policy=1&cc_lang_pref=en_US&hl=en_US&rel=0' ?>
+        $pre_title_html = "<button type='button' class='btn btn-secondary'>College of Nursing News</button>";
+        $post_content_html = "<p><strong>Read more news like this at nursing.ucf.edu/about/news-events/</strong></p>";
 
-		<article style="<?php echo $visibility;?>" data-article-number="<?php echo $article_count;?>" <?php //post_class(); ?>>
+        $array_source_nurscrosspost_posts[] = [
+            'pre_title_html' => $pre_title_html,
+            'image_url' => $image,
+            'title' => $title,
+            'content' => $content,
+            'post_content_html' => $post_content_html
+        ];
 
-			<div class="photo-container" style="background-size: cover; background: #000 url('<?php echo $image; ?>') no-repeat center center;"><!--<img src="<?php echo $image; ?>" class="photo-prev" />--></div>
-
-			<div class="excerpt">
-				<h2><?php if( get_field('short_title') ) { echo get_field('short_title'); }else{ the_title(); } ?></h2>
-				<p><?php
-				$content = get_the_content();
-				echo wp_trim_words( strip_shortcodes($content) , '40' ); ?></p>
-
-				<p><strong>Continue reading visit nursing.ucf.edu/about/news-events/</strong></p>
-
-			</div>
-
-			<nav class="module-nav">
-
-				<div class="arrow-pagination">
-					<a class="arrow-prev" data-article-desired="<?php echo ($article_count - 1); ?>" href="#"><span>Prev</span></a>
-					<a class="arrow-next" data-article-desired="<?php echo ($article_count + 1); ?>" href="#"><span>Next</span></a>
-				</div>
-
-				<section class="read-go <?php if ( !get_field( 'youtube_video_id' ) ) { ?>no-video<?php } ?>">
-
-					<section class="read-info">
-						<h3 class="sub-title"><span>Read Full Article</span></h3>
-						 <p><strong class="link"><?php the_permalink(); ?></strong></p>
-<!--                        <span class="bitly">--><?php //echo do_shortcode( '[ucf_com_bitly]' . get_permalink() . '[/ucf_com_bitly]' ); ?><!--</span>-->
-
-						<?php //echo do_shortcode( '[short_url_url]' ); ?>
-
-					</section>
-
-				</section>
-
-			</nav>
-
-		</article>
-
-	<?php }
-
-	/* Restore original Post Data */
-	wp_reset_postdata();
+    }
 } else {
-	// no posts found
-    echo "<b>No posts to display. Please see med.ucf.edu for more.</b>";
+    // no news from nurs rss feed found
 }
-restore_current_blog();
+
+###### Print all articles
+// combine all news sources.
+$array_all_articles = [];
+for ($i = 0; $i < $max_articles_per_source; $i++){
+    if ($array_source_nurscrosspost_posts[$i]){
+        $array_all_articles[] = $array_source_nurscrosspost_posts[$i];
+    }
+}
+
+/**
+ * Print out all the articles, after they've been mixed.
+ */
+for ($i = 0; $i < sizeof($array_all_articles); $i++){
+    if ($i == 0){
+        $visibility = "";
+    } else {
+        $visibility = "display: none";
+    }
+    // This echo line is the actual printing of html to the page.
+    echo article_html($visibility, $i+1, $array_all_articles[$i]);
+}
+
+
+
+######
+###### Functions
+
+/**
+ * Returns a consistent html for content.
+ * @param $visibility
+ * @param $article_number
+ * @param $article_details
+ * @return string
+ */
+function article_html($visibility, $article_number, $article_details) {
+    $trimmed_content = wp_trim_words( strip_shortcodes($article_details['content']) , '55' );
+    $previous_article = $article_number - 1;
+    $next_article = $article_number + 1;
+    $article_number = (int) $article_number;
+    return "
+    <article style='${visibility}' data-article-number='${article_number}' >
+        <div class='photo-container' style='background: #000 url(\"${article_details['image_url']}\") no-repeat center center; background-size: cover;'></div>
+        <div class='excerpt'>
+            ${article_details['pre_title_html']}
+            <h2>${article_details['title']}</h2>
+            <p>${trimmed_content}</p>
+            ${article_details['post_content_html']}
+        </div>
+        <nav class='module-nav'>
+            <div class='arrow-pagination'>
+                <a class='arrow-prev' data-article-desired='${previous_article}' href='#'><span>Prev</span></a>
+                <a class='arrow-next' data-article-desired='${next_article}' href='#'><span>Next</span></a>
+            </div>
+        </nav>
+    </article>";
+}
+
+/**
+ * Gets the feed from a url. It disables 'reject_unsafe_urls' to allow the request to continue.
+ *
+ * @param $url
+ *
+ * @return mixed
+ */
+function external_site_query_feed( $url ) {
+
+    add_filter( 'http_request_args', __NAMESPACE__ . '\\disable_safety_filter' );
+    add_filter( 'wp_feed_cache_transient_lifetime',  __NAMESPACE__ . '\\external_site_transient_lifetime'); // refresh every 10 minutes
+
+    $feed = fetch_feed( $url );
+    remove_filter( 'wp_feed_cache_transient_lifetime',  __NAMESPACE__ . '\\external_site_transient_lifetime' );
+    remove_filter( 'http_request_args',  __NAMESPACE__ . '\\disable_safety_filter' );
+
+    return $feed;
+}
+
+
+function external_site_query( string $rss_url, int $max_articles = 5) {
+    $news_posts = [];
+    $feed       = external_site_query_feed( $rss_url );
+    if ( ! is_wp_error( $feed ) ) {
+        $max_items  = $feed->get_item_quantity( $max_articles );
+        $feed_items = $feed->get_items( 0, $max_items );
+
+        foreach ( $feed_items as $item ) {
+            /* @var \SimplePie_Item $item */
+
+            /* get thumbnail */
+            $htmlDOM = new simple_html_dom();
+            $htmlDOM->load( $item->get_content() );
+            $image     = $htmlDOM->find( 'img', 0 );
+            $image_url = $image->src;
+
+            $content = $item->get_content();
+
+            $content_minus_image = wp_trim_words( $content, 45, '...' );
+            if ( ! isset( $image_url ) ) {
+                $image_url = plugins_url("images/default.jpg", __FILE__);
+            }
+
+            $UTC         = new \DateTimeZone( "UTC" );
+            $timezoneEST = new \DateTimeZone( "America/New_York" );
+            $datesort    = new \DateTime( $item->get_date( 'Y-m-d H:i:s' ), $UTC );
+            $datesort->setTimezone( $timezoneEST );
+            $date = new \DateTime( $item->get_date(), $UTC );
+            $date->setTimezone( $timezoneEST );
+
+            $news_posts[] = array(
+                'image'     => $image_url,
+                'permalink' => $item->get_link(),
+                'title'     => $item->get_title(),
+                'piece'     => $content_minus_image,
+                'datesort'  => $datesort->format( 'Y-m-d H:i:s T' ),
+                'date'      => $date->format( 'F d, Y' ),
+                'class'     => 'class="news-preview-image"',
+                'target'    => 'target="_blank"'
+            );
+        }
+    }
+    add_filter( 'the_excerpt_rss',  __NAMESPACE__ . '\\wcs_post_thumbnails_in_feeds' );
+    add_filter( 'the_content_feed',  __NAMESPACE__ . '\\wcs_post_thumbnails_in_feeds' );
+
+    return $news_posts;
+}
+
+
+/**
+ * Disables the filter that prevents unsafe urls from loading.
+ *
+ * @param $args
+ *
+ * @return mixed
+ */
+function disable_safety_filter( $args ) {
+    $args[ 'reject_unsafe_urls' ] = false;
+
+    return $args;
+}
+
+/**
+ * Returns a transient lifetime of 10 minutes
+ * @return int
+ */
+function external_site_transient_lifetime() {
+    return 600;
+}
+//restore_current_blog();
+
 ?>

@@ -1,4 +1,4 @@
-<?php
+loop-post-nurs.php<?php
 switch_to_blog ( '1' );
 
 $taxonomy = 'news_category';

@@ -72,6 +72,14 @@ function com_child_theme_scripts() {
         true // load in footer
     );
 
+    // Register the vestibule js, but don't enqueue it. Let the template page enqueue it so it only loads on those pages.
+    wp_register_script(
+        'com_child_theme_screen_engine_non_interactive_nurs',
+        get_stylesheet_directory_uri() . '/js/engine-non-interactive-nurs.js',
+        array(),
+        filemtime( get_stylesheet_directory() . '/js/engine-non-interactive-nurs.js'), // force cache invalidate if md5 changes
+        true // load in footer
+    );
 
 }
 
