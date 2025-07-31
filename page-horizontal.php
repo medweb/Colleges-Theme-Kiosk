@@ -32,7 +32,7 @@ $classes = get_body_class();
 
 		 } else {
 
-		 	echo 'NURSING NEWS';
+            get_template_part( 'loop-post-nurs-vertical-interactive' );
 
 		 }?>
 

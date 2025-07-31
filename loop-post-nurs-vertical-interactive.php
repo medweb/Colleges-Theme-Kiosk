@@ -1,4 +1,4 @@
-<?php /** @noinspection CssUnknownTarget */
+<?php
 
 namespace ucf_com_main_screen;
 // pull in clinical trials from blog 1, and pull in specially tagged articles from external ucfhealth rss feed.
@@ -20,6 +20,7 @@ if ( count($external_posts) > 0 ) {
 
         $content = $external_posts[$i]['piece'];
         $title = $external_posts[$i]['title'];
+        $link  = $external_posts[$i]['link'];
         $image = $external_posts[$i]['image'];
         if (!($image)) {
             $image = "https://med.ucf.edu/media/2021/02/med-center-exterior-shot-for-marketing-1024x683.jpg";
@@ -32,6 +33,7 @@ if ( count($external_posts) > 0 ) {
             'pre_title_html' => $pre_title_html,
             'image_url' => $image,
             'title' => $title,
+            'link' => $link,
             'content' => $content,
             'post_content_html' => $post_content_html
         ];
@@ -76,7 +78,7 @@ for ($i = 0; $i < sizeof($array_all_articles); $i++){
  * @return string
  */
 function article_html($visibility, $article_number, $article_details) {
-    $trimmed_content = wp_trim_words( strip_shortcodes($article_details['content']) , '55' );
+    $trimmed_content = wp_trim_words( strip_shortcodes($article_details['content']) , '40' );
     $previous_article = $article_number - 1;
     $next_article = $article_number + 1;
     $article_number = (int) $article_number;
@@ -94,6 +96,13 @@ function article_html($visibility, $article_number, $article_details) {
                 <a class='arrow-prev' data-article-desired='${previous_article}' href='#'><span>Prev</span></a>
                 <a class='arrow-next' data-article-desired='${next_article}' href='#'><span>Next</span></a>
             </div>
+            <section class='read-go no-video'>
+
+                <section class='read-info'>
+                    <h3 class='sub-title'><span>Read Full Article</span></h3>
+                    <p><strong class='link'>${article_details['link']}</strong></p>
+                </section>
+            </section>
         </nav>
     </article>";
 }
