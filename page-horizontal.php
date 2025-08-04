@@ -32,7 +32,7 @@ $classes = get_body_class();
 
 		 } else {
 
-            get_template_part( 'loop-post-nurs-vertical-interactive' );
+            get_template_part( 'loop-post-nurs' );
 
 		 }?>
 

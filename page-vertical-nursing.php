@@ -3,7 +3,7 @@
 
 get_header();
 wp_dequeue_script('com_child_theme_screen_engine');
-wp_enqueue_script('com_child_theme_screen_engine_interactive_nurs');
+wp_enqueue_script('com_child_theme_screen_engine_nurs');
 ?>
 
     <section class="container">
@@ -13,7 +13,7 @@ wp_enqueue_script('com_child_theme_screen_engine_interactive_nurs');
         <section class="main-content">
 
 
-            <?php get_template_part( 'loop-post-nurs' ); ?>
+            <?php get_template_part( 'loop-post-nurs-vertical-interactive' ); ?>
 
 
         </section>
