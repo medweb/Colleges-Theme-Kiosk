@@ -26,7 +26,8 @@ if ( count($external_posts) > 0 ) {
             $image = "https://med.ucf.edu/media/2021/02/med-center-exterior-shot-for-marketing-1024x683.jpg";
         }
 
-        $pre_title_html = "<button type='button' class='btn btn-secondary'>College of Nursing News</button>";
+        //$pre_title_html = "<button type='button' class='btn btn-secondary'>College of Nursing News</button>";
+        $pre_title_html = "";
         $post_content_html = "<p><strong>Read more news like this at nursing.ucf.edu/about/news-events/</strong></p>";
 
         $array_source_nurscrosspost_posts[] = [
