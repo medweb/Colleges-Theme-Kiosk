@@ -12,7 +12,7 @@ $max_articles_per_source = 5; // multiply this by the number of sources to get t
 ###### Source 1
 // Get rss feed posts.
 $array_source_nurscrosspost_posts = [];
-$external_posts = external_site_query( "https://nursing.ucf.edu/feed/?category_name=community", $max_articles_per_source );
+$external_posts = external_site_query( "https://nursing.ucf.edu/feed/?category_name=tv-news", $max_articles_per_source );
 
 // Print out the rss news articles
 if ( count($external_posts) > 0 ) {
