@@ -26,7 +26,7 @@ if ( count($external_posts) > 0 ) {
         }
 
         $pre_title_html = "<button type='button' class='btn btn-secondary'>College of Nursing News</button>";
-        $post_content_html = "<p><strong>Read more news like this at nursing.ucf.edu/about/news-events/</strong></p>";
+        $post_content_html = "<p><strong>Read more news like this at nursing.ucf.edu/news</strong></p>";
 
         $array_source_nurscrosspost_posts[] = [
             'pre_title_html' => $pre_title_html,
