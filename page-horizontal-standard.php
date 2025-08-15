@@ -2,13 +2,11 @@
 /* Template Name: Horizontal Page Standard */
 get_header();
 
-$classes = get_body_class();
-
 ?>
 
 <section class="container">
 
-	<div class="overlay-black-fade">&nbsp;</div>
+    <div class="overlay-black-fade">&nbsp;</div>
 
     <section class="main-content">
 
