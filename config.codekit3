@@ -162,6 +162,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/engine-nurs.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/engine-nurs-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/js\/engine-social-prevent-clicks.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -214,6 +225,14 @@
       "oAP" : "\/loop-post-1.php",
       "oF" : 0
     },
+    "\/loop-post-nurs-vertical-interactive.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/loop-post-nurs-vertical-interactive.php",
+      "oF" : 0
+    },
     "\/loop-post-nurs.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -246,6 +265,14 @@
       "oAP" : "\/page-horizontal-nurs.php",
       "oF" : 0
     },
+    "\/page-horizontal-static.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-horizontal-static.php",
+      "oF" : 0
+    },
     "\/page-horizontal-ucfhealth.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -260,6 +287,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/page-horizontal.php",
+      "oF" : 0
+    },
+    "\/page-vertical-nursing.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-vertical-nursing.php",
       "oF" : 0
     },
     "\/page.php" : {
