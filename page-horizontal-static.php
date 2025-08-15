@@ -1,8 +1,7 @@
 <?php
-/* Template Name: Horizontal Page Standard Nursing */
+/* Template Name: Horizontal Page Static */
 get_header();
 wp_dequeue_script('com_child_theme_screen_engine');
-wp_enqueue_script('com_child_theme_screen_engine_non_interactive_nurs');
 
 ?>
 
